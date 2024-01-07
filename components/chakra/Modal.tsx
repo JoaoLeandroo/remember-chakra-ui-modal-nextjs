@@ -15,7 +15,7 @@ import {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
       <>
-        <button className='p-3 border border-slate-200 rounded-3xl shadow-2xl bg-slate-100 text-black hover:bg-slate-300 transition duration-500' onClick={onOpen}>Open Modal</button>
+        <button className='p-3 border border-slate-200 rounded-3xl shadow-2xl bg-slate-100 text-black hover:bg-slate-300 transition duration-500 font-bold' onClick={onOpen}>Open Modal</button>
   
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
