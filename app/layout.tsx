@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import './globals.css'
+import { ChakraProvider } from '@chakra-ui/react'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Roboto({ subsets: ['latin'], weight: ['400', '900'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +16,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR">
+      <body className={font.className}>
+        <ChakraProvider>
+          <main>
+            {children}
+          </main>  
+        </ChakraProvider>
+      </body>
     </html>
   )
 }
